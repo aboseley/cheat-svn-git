@@ -121,8 +121,10 @@ git checkout master
 git svn branch feature_b -m "feature b"
 git checkout -b feature_b origin/feature_b
 touch g h
-git commit g -m "add g"
-git commit h -m "add h"
+git add g
+git commit -m "add g"
+git add h 
+git commit -m "add h"
 git rebase master
 git checkout master
 ```
