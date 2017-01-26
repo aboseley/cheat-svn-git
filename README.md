@@ -36,6 +36,18 @@ cd $HOME/test_svn
 svn update
 ```
 
+revert a commit then push revert to svn
+```
+cd $HOME/test_git
+git revert HEAD 
+git svn decommit
+
+cd $HOME/test_svn
+svn update
+svn log
+```
+
+
 # branches
 branch svn -> git
 ```
@@ -101,16 +113,6 @@ svn log
 echo "all commits squashed into one svn commit
 ```
 
-## revert merge
-```
-cd $HOME/test_git
-git revert HEAD -m 1
-git svn decommit
-
-cd $HOME/test_svn
-svn update
-svn log
-```
 
 ## local git branch, rebase, then dcommit linear history
 Moving all commits to the target branch to create a linear history
