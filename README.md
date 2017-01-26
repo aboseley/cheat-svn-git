@@ -69,7 +69,7 @@ echo "verify file c exists"
 
 # workflows
 
-## local git branch dcommit - merge commit 
+## local git branch  then dcommit the merge commit 
 Commiting a merge squashed the all the commits on the merged branch
 
 ```
@@ -112,7 +112,7 @@ svn update
 svn log
 ```
 
-## local git branch dcommit - rebased first
+## local git branch, rebase, then dcommit linear history
 Moving all commits to the target branch to create a linear history
 
 ```
