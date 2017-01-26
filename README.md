@@ -9,7 +9,7 @@ svn mkdir --parents file:///$HOME/svn_repos/test_git_svn/{trunk,branches,tags} -
 Checkout a git and svn working folder
 ```
 svn co file:///$HOME/svn_repos/test_git_svn/trunk test_svn
-git clone -s file:///$HOME/svn_repos/test_git_svn test_git
+git svn clone -s file:///$HOME/svn_repos/test_git_svn test_git
 ```
 
 # file ops
