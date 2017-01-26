@@ -68,7 +68,7 @@ echo "verify file c exists"
 ```
 
 # workflows
-## local git branch then dcommit
+## local git branch dcommit - merge commit - squashes branch commits
 ```
 cd $HOME/test_git
 git checkout master
@@ -84,13 +84,39 @@ git rebase master
 git checkout master
 git merge --no-ff feature_a -m "feature a work"
 git svn dcommit
-git branch -D feature_a
 
 cd $HOME/test_svn
 svn switch ^/test_git_svn/trunk
 svn update
 svn log
 echo "all commits squashed into one svn commit
-#
+```
+
+## revert merge
+```
+cd $HOME/test_git
+git revert HEAD -m 1
+git svn decommit
+
+cd $HOME/test_svn
+svn update
+svn log
+```
+
+## local git branch dcommit - rebased
+```
+cd $HOME/test_git
+
+
+git merge feature_a --ff-only
+git svn dcommit
+git log
+
+cd $HOME/test_svn
+svn update
+svn log
+```
+
+
 
 
