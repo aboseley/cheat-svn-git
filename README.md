@@ -18,7 +18,7 @@ Add a file in svn -> git
 cd $HOME/test_svn
 touch a
 svn add a
-svn commit a -m "add a"
+svn commit -m "add a"
 
 cd $HOME/test_git
 git svn rebase
@@ -28,7 +28,7 @@ Add a file in git- > svn
 ```
 cd $HOME/test_git
 touch b
-git commit -m "add b"
+git commit b -m "add b"
 git dcommit 
 
 cd $HOME/test_svn
