@@ -67,3 +67,27 @@ svn switch ^/test_git_svn/branches/branch_b
 echo "verify file c exists"
 ```
 
+# workflows
+## local git branch then dcommit
+```
+cd $HOME/test_git
+git checkout master
+git svn branch feature_a -m "feature a"
+git checkout -b feature_a origin/feature_a
+touch e
+git add e
+git commit e -m "add e"
+git add f
+git commit f -m "add f"
+git rebase master
+git checkout master
+git merge --no-ff feature_a -m "feature a work"
+git svn dcommit
+
+cd $HOME/test_svn
+svn switch ^/test_git_svn/trunk
+svn update
+svn ls
+#
+
+
