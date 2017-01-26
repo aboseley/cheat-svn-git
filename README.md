@@ -110,7 +110,7 @@ cd $HOME/test_svn
 svn switch ^/test_git_svn/trunk
 svn update
 svn log
-echo "all commits squashed into one svn commit
+echo "all commits squashed into one svn commit"
 ```
 
 
@@ -141,5 +141,5 @@ cd $HOME/test_svn
 svn switch ^/test_git_svn/trunk
 svn update
 svn log
-echo "all commits squashed into one svn commit
+echo "all commits are logged"
 ```
