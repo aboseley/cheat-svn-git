@@ -28,7 +28,8 @@ Add a file in git- > svn
 ```
 cd $HOME/test_git
 touch b
-git commit b -m "add b"
+git add b 
+git commit -m "add b"
 git dcommit 
 
 cd $HOME/test_svn
