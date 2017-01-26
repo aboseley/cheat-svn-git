@@ -1,4 +1,4 @@
-# test-git-svn
+# git-svn 
 
 Create the svn repo
 ```
@@ -74,20 +74,23 @@ cd $HOME/test_git
 git checkout master
 git svn branch feature_a -m "feature a"
 git checkout -b feature_a origin/feature_a
-touch e
-git add e
+touch e 
+git add e 
 git commit e -m "add e"
+touch f 
 git add f
 git commit f -m "add f"
 git rebase master
 git checkout master
 git merge --no-ff feature_a -m "feature a work"
 git svn dcommit
+git branch -D feature_a
 
 cd $HOME/test_svn
 svn switch ^/test_git_svn/trunk
 svn update
 svn log
+echo "all commits squashed into one svn commit
 #
 
 
