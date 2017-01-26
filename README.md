@@ -82,7 +82,13 @@ git add f
 git commit f -m "add f"
 git rebase master
 git checkout master
+```
+
+```
 git merge --no-ff feature_a -m "feature a work"
+```
+
+```
 git svn dcommit
 
 cd $HOME/test_svn
@@ -106,17 +112,25 @@ svn log
 ## local git branch dcommit - rebased
 ```
 cd $HOME/test_git
-
-
-git merge feature_a --ff-only
-git svn dcommit
-git log
-
-cd $HOME/test_svn
-svn update
-svn log
+git checkout master
+git svn branch feature_b -m "feature b"
+git checkout -b feature_b origin/feature_b
+touch g 
+git add g
+git commit g -m "add g"
+git rebase master
+git checkout master
 ```
 
+```
+git merge --ff-only feature_a -m "feature a work"
+```
 
-
-
+```
+git svn dcommit
+cd $HOME/test_svn
+svn switch ^/test_git_svn/trunk
+svn update
+svn log
+echo "all commits squashed into one svn commit
+```
