@@ -15,33 +15,33 @@ git svn clone -s file:///$HOME/svn_repos/test_git_svn test_git
 # file ops
 Add a file in svn -> git
 ```
-cd test_svn
+cd $HOME/test_svn
 touch a
 svn add a
 svn commit a -m "add a"
 
-cd test_git
+cd $HOME/test_git
 git svn rebase
 ```
 
 Add a file in git- > svn
 ```
-cd test_gi
+cd $HOME/test_gi
 touch b
 git commit b -m "add b"
 git dcommit 
 
-cd test_svn
+cd $HOME/test_svn
 svn update
 ```
 
 # branches
 ```
-cd test_svn
+cd $HOME/test_svn
 svn copy  ^/test_git_svn/trunk ^/test_git_svn/branches/branch_a -m "create branch a"
 svn switch ^/test_git_svn/branches/branch_a
 
-cd test_git
+cd $HOME/test_git
 git svn fetch
 git checkout -b branch_a origin/branch_a
 #
