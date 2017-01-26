@@ -87,7 +87,7 @@ git svn dcommit
 cd $HOME/test_svn
 svn switch ^/test_git_svn/trunk
 svn update
-svn ls
+svn log
 #
 
 
