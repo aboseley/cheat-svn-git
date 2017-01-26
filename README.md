@@ -68,7 +68,10 @@ echo "verify file c exists"
 ```
 
 # workflows
-## local git branch dcommit - merge commit - squashes branch commits
+
+## local git branch dcommit - merge commit 
+Commiting a merge squashed the all the commits on the merged branch
+
 ```
 cd $HOME/test_git
 git checkout master
@@ -109,15 +112,17 @@ svn update
 svn log
 ```
 
-## local git branch dcommit - rebased
+## local git branch dcommit - rebased first
+Moving all commits to the target branch to create a linear history
+
 ```
 cd $HOME/test_git
 git checkout master
 git svn branch feature_b -m "feature b"
 git checkout -b feature_b origin/feature_b
-touch g 
-git add g
+touch g h
 git commit g -m "add g"
+git commit h -m "add h"
 git rebase master
 git checkout master
 ```
