@@ -3,7 +3,7 @@
 Create the svn repo
 ```
 svnadmin create $HOME/svn_repos
-svn mkdir file:///$HOME/svn_repos/test_git_svn/{trunk,branches,tags}
+svn mkdir file:///$HOME/svn_repos/test_git_svn/{trunk,branches,tags} -m "create project test_svn_git"
 ```
 
 Checkout a git and svn working folder
