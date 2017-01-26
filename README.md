@@ -26,7 +26,7 @@ git svn rebase
 
 Add a file in git- > svn
 ```
-cd $HOME/test_gi
+cd $HOME/test_git
 touch b
 git commit b -m "add b"
 git dcommit 
