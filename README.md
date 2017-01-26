@@ -62,7 +62,8 @@ git commit -m "adding c"
 git svn dcommit
 git svn info
 
-cd $HOME/test_git
+cd $HOME/test_svn
 svn switch ^/test_git_svn/branches/branch_b
 echo "verify file c exists"
 ```
+
